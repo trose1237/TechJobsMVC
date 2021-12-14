@@ -4,7 +4,31 @@
 
     @{
         //TODO #1: Use a loop to display job results in a table.
-    }
 
+
+            <table class="job-listing">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Employer</th>
+                    <th>Location</th>
+                    <th>Position Type</th>
+                    <th>Skill</th>
+                </tr>
+            
+            @foreach (var jobs in ViewBag.jobs)
+                {
+                    <tr>
+                        <td>@jobs.Id</td>
+                        <td>@jobs.Name</td>
+                        <td>@jobs.Employer</td>
+                        <td>@jobs.Location</td>
+                        <td>@jobs.PositionType</td>
+                        <td>@jobs.CoreCompetency</td>
+                    </tr>
+                };
+            </table>
+       
+     }
 
 </div>
